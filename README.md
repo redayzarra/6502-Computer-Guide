@@ -20,6 +20,12 @@ When you receive your kit, ensure you have all the necessary components:
 - Additional ICs for address decoding and I/O
 - LEDs, resistors, and capacitors
 
+<div align="center">
+ 
+  <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/82bf0d62-8094-46b3-9c5d-a1ea7e716009" alt="Labeled Parts">
+
+</div>
+
 ## Understanding the 6502 Microprocessor
 The 6502 microprocessor was a popular chip in the 1970s, used in many famous computers like the Apple I and Commodore 64. It features:
 - 8-bit data bus
