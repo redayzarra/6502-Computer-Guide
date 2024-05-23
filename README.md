@@ -34,8 +34,9 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 
 ## Step-by-Step Assembly Instructions
 
-### 1. Connect the 6502 Microprocessor to Power
+This section meticulously breaks down each phase of the assembly process into clear, manageable steps. Starting with organizing your components, you'll move on to setting up your breadboards, wiring the CPU and support chips, and then proceed to connecting memory and I/O devices.
 
+### 1. Connect the 6502 Microprocessor to Power
 
 <div align="center">
   <table>
