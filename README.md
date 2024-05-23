@@ -34,6 +34,39 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 
 ## Step-by-Step Assembly Instructions
 
+### 1. Connect the 6502 Microprocessor to Power
+
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
+        <figcaption>Figure 3-1 W65C02S 40 Pin PDIP Pinout</figcaption>
+      </td>
+      <td align="center" >
+        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
+        <figcaption>Connect VDD to positive power, and VSS to ground</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
+ 
+  
+
+</div>
+
+<div>
+ <br />
+</div>
+
+<div align="center">
+
+  
+
+</div>
 
 
 ### Testing and Troubleshooting
