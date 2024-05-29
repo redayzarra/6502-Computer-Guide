@@ -32,6 +32,46 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 - 16-bit address bus
 - Data sheet (30 pages)
 
+#### Pins Explained
+
+**#1: VPB** - Vector Pull output indicates when interrupt vectors are being addressed
+
+**#2: RDY** - Ready (low input logic) will halt the microprocessor in its current state
+
+**#3: PHI1O** - Phase 1 Out is the inverted PHI2 signal
+
+**#4: IRQB** - Interrupt Request input signal to initiate an interrupt sequence
+
+**#5: MLB** - Memory Lock output to ensure the integrity of Read-Modify-Write instructions in multiprocessor systems
+
+**#6: NMIB** - Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition
+
+**#7: SYNC** - Synchronize output indicates OpCode fetch cycle
+
+**#8: VDD** - Positive power supply voltage
+
+**#9-20: A0** - Address Bus line 0 to 11 used to address memory and I/O registers
+
+**#21: VSS** - System logic ground
+
+**#22-25: A12** - Address Bus line 12 to 15 used to address memory and I/O registers
+
+**#26-33: D7 - D0** - Data Bus line 0 to 7 used for data exchange with memory and I/O registers
+
+**#34: RWB** - Read/Write output signal controls data transfer direction (high for read, low for write)
+
+**#35: NC** - No Connect pins not connected internally and should not be connected externally
+
+**#36: BE** - Bus Enable input signal provides external control of the Address, Data, and RWB buffers
+
+**#37: PHI2** - Phase 2 In is the system clock input to the microprocessor internal clock
+
+**#38: SOB** - Set Overflow input sets the overflow bit in the status code register on a negative transition
+
+**#39: PHI2O** - Phase 2 Out signal generated from PHI2
+
+**#40: RESB** - Reset input used to initialize the microprocessor and start program execution
+
 ## Step-by-Step Assembly Instructions
 
 This section meticulously breaks down each phase of the assembly process into clear, manageable steps. Starting with organizing your components, you'll move on to setting up your breadboards, wiring the CPU and support chips, and then proceed to connecting memory and I/O devices.
@@ -53,6 +93,13 @@ This section meticulously breaks down each phase of the assembly process into cl
   </table>
 </div>
 
+#### Pin Connections (✔= Connect)
+
+**#8: VDD ✔** - Positive power supply voltage
+
+**#21: VSS ✔** - System logic ground
+
+
 ### 2. Connecting Input Pins
 
 <div align="center">
@@ -70,85 +117,19 @@ This section meticulously breaks down each phase of the assembly process into cl
   </table>
 </div>
 
-#### Pins Explained (✔= Connect)
-
-**#1: VPB** - Vector Pull output indicates when interrupt vectors are being addressed
+#### Pin Connections (✔= Connect)
 
 **#2: RDY ✔** - Ready (low input logic) will halt the microprocessor in its current state
 
-**#3: PHI1O** - Phase 1 Out is the inverted PHI2 signal
-
 **#4: IRQB ✔** - Interrupt Request input signal to initiate an interrupt sequence
 
-**#5: MLB** - Memory Lock output to ensure the integrity of Read-Modify-Write instructions in multiprocessor systems
-
 **#6: NMIB ✔** - Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition
-
-**#7: SYNC** - Synchronize output indicates OpCode fetch cycle
-
-**#8: VDD ✔** - Positive power supply voltage
-
-**#9: A0** - Address Bus line 0 used to address memory and I/O registers
-
-**#10: A1** - Address Bus line 1 used to address memory and I/O registers
-
-**#11: A2** - Address Bus line 2 used to address memory and I/O registers
-
-**#12: A3** - Address Bus line 3 used to address memory and I/O registers
-
-**#13: A4** - Address Bus line 4 used to address memory and I/O registers
-
-**#14: A5** - Address Bus line 5 used to address memory and I/O registers
-
-**#15: A6** - Address Bus line 6 used to address memory and I/O registers
-
-**#16: A7** - Address Bus line 7 used to address memory and I/O registers
-
-**#17: A8** - Address Bus line 8 used to address memory and I/O registers
-
-**#18: A9** - Address Bus line 9 used to address memory and I/O registers
-
-**#19: A10** - Address Bus line 10 used to address memory and I/O registers
-
-**#20: A11** - Address Bus line 11 used to address memory and I/O registers
-
-**#21: VSS ✔** - System logic ground
-
-**#22: A12** - Address Bus line 12 used to address memory and I/O registers
-
-**#23: A13** - Address Bus line 13 used to address memory and I/O registers
-
-**#24: A14** - Address Bus line 14 used to address memory and I/O registers
-
-**#25: A15** - Address Bus line 15 used to address memory and I/O registers
-
-**#26: D7** - Data Bus line 7 used for data exchange with memory and I/O registers
-
-**#27: D6** - Data Bus line 6 used for data exchange with memory and I/O registers
-
-**#28: D5** - Data Bus line 5 used for data exchange with memory and I/O registers
-
-**#29: D4** - Data Bus line 4 used for data exchange with memory and I/O registers
-
-**#30: D3** - Data Bus line 3 used for data exchange with memory and I/O registers
-
-**#31: D2** - Data Bus line 2 used for data exchange with memory and I/O registers
-
-**#32: D1** - Data Bus line 1 used for data exchange with memory and I/O registers
-
-**#33: D0** - Data Bus line 0 used for data exchange with memory and I/O registers
-
-**#34: RWB** - Read/Write output signal controls data transfer direction (high for read, low for write)
-
-**#35: NC** - No Connect pins not connected internally and should not be connected externally
 
 **#36: BE ✔** - Bus Enable input signal provides external control of the Address, Data, and RWB buffers
 
 **#37: PHI2 ✔** - Phase 2 In is the system clock input to the microprocessor internal clock
 
 **#38: SOB ✔** - Set Overflow input sets the overflow bit in the status code register on a negative transition
-
-**#39: PHI2O** - Phase 2 Out signal generated from PHI2
 
 **#40: RESB ✔** - Reset input used to initialize the microprocessor and start program execution
 
