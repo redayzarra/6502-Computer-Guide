@@ -72,6 +72,23 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 
 **#40: RESB** - Reset input used to initialize the microprocessor and start program execution
 
+
+## Understanding the EEPROM
+- We'll be using a 28C256 EEPROM to store our program.
+- The EEPROM can store 256K bits (32 kilobytes).
+- It has 15 address lines (A0-A14) and 8 data lines for I/O.
+
+### Connecting EEPROM to 6502
+1. The 6502 has 16 address lines (A0-A15), allowing access to 65,536 unique addresses.
+2. Two options for connecting:
+   a. Connect A0-A14 directly, repeating ROM contents twice in address space.
+   b. Use A15 to control EEPROM's chip enable, allowing upper half of address space for other uses (RAM, I/O).
+
+### Considerations
+- The 6502 reads from addresses FFFC and FFFD on startup to determine where to begin fetching instructions.
+- These addresses should be accessible in the ROM for proper initialization.
+
+
 ## Step-by-Step Assembly Instructions
 
 This section meticulously breaks down each phase of the assembly process into clear, manageable steps. Starting with organizing your components, you'll move on to setting up your breadboards, wiring the CPU and support chips, and then proceed to connecting memory and I/O devices.
@@ -132,6 +149,12 @@ This section meticulously breaks down each phase of the assembly process into cl
 **#38: SOB ✔** - Set Overflow input sets the overflow bit in the status code register on a negative transition
 
 **#40: RESB ✔** - Reset input used to initialize the microprocessor and start program execution
+
+
+  
+### 3. ROM Integration
+
+
 
 
 <div><br></br></div>
