@@ -100,7 +100,7 @@ This section meticulously breaks down each phase of the assembly process into cl
     <tr>
       <td align="center">
         <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-        <figcaption>Figure 3-1 W65C02S 40 Pin PDIP Pinout</figcaption>
+        <figcaption>Figure 1: W65C02S 40 Pin PDIP Pinout</figcaption>
       </td>
       <td align="center" >
         <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
@@ -124,7 +124,7 @@ This section meticulously breaks down each phase of the assembly process into cl
     <tr>
       <td align="center">
         <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-        <figcaption>Figure 3-1 W65C02S 40 Pin PDIP Pinout</figcaption>
+        <figcaption>Figure 1: W65C02S 40 Pin PDIP Pinout</figcaption>
       </td>
       <td align="center" >
         <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e5007ef8-211d-4549-bb34-91eba05b8ea5" alt="6502 Microprocessor connected to input pins" height="350"><br>
@@ -153,6 +153,27 @@ This section meticulously breaks down each phase of the assembly process into cl
 
   
 ### 3. ROM Integration
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
+        <figcaption>Figure 2: 28C256 EEPROM Pinout</figcaption>
+      </td>
+      <td align="center" >
+        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/5ec7bc17-05db-463e-a864-282cfb75943c" alt="28C256 EEPROM on breadboard" height="350"><br>
+        <figcaption>Connect VDD to positive power, and VSS to ground</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+#### Pin Connections (✔= Connect)
+
+**#14: VSS ✔** - System logic ground
+
+**#28: VCC ✔** - Positive power supply voltage
 
 
 
