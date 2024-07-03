@@ -73,20 +73,119 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 **#40: RESB** - Reset input used to initialize the microprocessor and start program execution
 
 
-## Understanding the EEPROM
-- We'll be using a 28C256 EEPROM to store our program.
-- The EEPROM can store 256K bits (32 kilobytes).
-- It has 15 address lines (A0-A14) and 8 data lines for I/O.
+### Key Features
 
-### Connecting EEPROM to 6502
-1. The 6502 has 16 address lines (A0-A15), allowing access to 65,536 unique addresses.
-2. Two options for connecting:
-   a. Connect A0-A14 directly, repeating ROM contents twice in address space.
-   b. Use A15 to control EEPROM's chip enable, allowing upper half of address space for other uses (RAM, I/O).
+- Address Bus (A0-A15): 16-bit address bus allowing access to 65,536 unique memory locations.
+- Data Bus (D0-D7): 8-bit bidirectional data bus for reading from and writing to memory and I/O devices.
+- Clock Inputs (PHI2): System clock input that controls the timing of the processor.
+- Interrupt Handling (IRQB, NMIB): Support for maskable and non-maskable interrupts.
+- Read/Write Control (RWB): Indicates whether the current operation is a read or write.
+- Power Management (RDY): Ability to halt the processor to save power or synchronize with slow memory/peripherals.
+- Reset (RESB): Input to initialize the processor and start program execution.
+
+### Connecting 6502 to Memory and I/O
+
+1. Address lines (A0-A15) connect to memory devices (like ROM and RAM) and I/O peripherals.
+2. Data lines (D0-D7) connect bidirectionally to memory and I/O devices.
+3. RWB signal connects to memory and I/O devices to indicate read or write operations.
+4. Clock signal (PHI2) is provided externally to drive the processor's timing.
 
 ### Considerations
+
+- The 6502 reads from addresses FFFC and FFFD on startup to determine the program start address (reset vector).
+- Proper setup of interrupt vectors is crucial for handling IRQ and NMI.
+- The RDY pin can be used to introduce wait states for slow memory or I/O devices.
+- The BE (Bus Enable) pin allows external control of the processor's buses, useful in multi-processor systems.
+- Careful timing considerations are needed, especially when interfacing with memory and I/O devices of varying speeds.
+
+
+## Understanding the AT28C256 EEPROM
+The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (EEPROM) used to store our program. It features:
+
+- Storage capacity: 256K bits (32 kilobytes)
+- Organization: 32,768 words x 8 bits
+- 15 address lines (A0-A14) for accessing 32,768 unique locations
+- 8 data lines (I/O0-I/O7) for input/output
+
+#### Pins Explained
+
+**#1: A14** - Address line 14 (Most Significant Bit)
+
+**#2: A12** - Address line 12
+
+**#3: A7** - Address line 7
+
+**#4: A6** - Address line 6
+
+**#5: A5** - Address line 5
+
+**#6: A4** - Address line 4
+
+**#7: A3** - Address line 3
+
+**#8: A2** - Address line 2
+
+**#9: A1** - Address line 1
+
+**#10: A0** - Address line 0 (Least Significant Bit)
+
+**#11: I/O0** - Data Input/Output 0
+
+**#12: I/O1** - Data Input/Output 1
+
+**#13: I/O2** - Data Input/Output 2
+
+**#14: GND** - Ground
+
+**#15: I/O3** - Data Input/Output 3
+
+**#16: I/O4** - Data Input/Output 4
+
+**#17: I/O5** - Data Input/Output 5
+
+**#18: I/O6** - Data Input/Output 6
+
+**#19: I/O7** - Data Input/Output 7
+
+**#20: CE** - Chip Enable (active low)
+
+**#21: A10** - Address line 10
+
+**#22: OE** - Output Enable (active low)
+
+**#23: A11** - Address line 11
+
+**#24: A9** - Address line 9
+
+**#25: A8** - Address line 8
+
+**#26: A13** - Address line 13
+
+**#27: WE** - Write Enable (active low)
+
+**#28: VCC** - Power supply voltage
+
+### Key Features
+
+- Address Lines (A0-A14): Used to specify the memory location for read or write operations.
+- Data Lines (I/O0-I/O7): Bidirectional pins for data input during write operations and data output during read operations.
+- CE (Chip Enable): When low, it enables the chip. When high, it puts the device in low-power standby mode.
+- OE (Output Enable): Controls the output buffers. When low, it enables data output during read operations.
+- WE (Write Enable): Controls write operations. A low-to-high transition initiates a write cycle.
+- VCC and GND: Power supply connections.
+
+### Connecting EEPROM to 6502
+
+1. The 6502 has 16 address lines (A0-A15), allowing access to 65,536 unique addresses.
+2. Two options for connecting:
+   - Connect A0-A14 directly, repeating ROM contents twice in address space.
+   - Use A15 to control EEPROM's chip enable (CE), allowing the upper half of address space for other uses (RAM, I/O).
+
+### Considerations
+
 - The 6502 reads from addresses FFFC and FFFD on startup to determine where to begin fetching instructions.
 - These addresses should be accessible in the ROM for proper initialization.
+- Proper connection of CE, OE, and WE pins is crucial for correct operation and power management.
 
 
 ## Step-by-Step Assembly Instructions
