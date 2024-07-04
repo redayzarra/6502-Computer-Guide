@@ -32,45 +32,36 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 - 16-bit address bus
 - Data sheet (30 pages)
 
-#### Pins Explained
+<details>
+ 
+<summary>
 
-**#1: VPB** - Vector Pull output indicates when interrupt vectors are being addressed
+#### Pin Connections
+</summary>
+ 
+| Pin | Name | Description |
+|-----|------|-------------|
+| **#1** | **VPB** | Vector Pull output indicates when interrupt vectors are being addressed |
+| **#2** | **RDY** | Ready (low input logic) will halt the microprocessor in its current state |
+| **#3** | **PHI1O** | Phase 1 Out is the inverted PHI2 signal |
+| **#4** | **IRQB** | Interrupt Request input signal to initiate an interrupt sequence |
+| **#5** | **MLB** | Memory Lock output to ensure the integrity of Read-Modify-Write instructions in multiprocessor systems |
+| **#6** | **NMIB** | Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition |
+| **#7** | **SYNC** | Synchronize output indicates OpCode fetch cycle |
+| **#8** | **VDD** | Positive power supply voltage |
+| **#9-20** | **A0-A11** | Address Bus lines 0 to 11 used to address memory and I/O registers |
+| **#21** | **VSS** | System logic ground |
+| **#22-25** | **A12-A15** | Address Bus lines 12 to 15 used to address memory and I/O registers |
+| **#26-33** | **D7-D0** | Data Bus lines 0 to 7 used for data exchange with memory and I/O registers |
+| **#34** | **RWB** | Read/Write output signal controls data transfer direction (high for read, low for write) |
+| **#35** | **NC** | No Connect pins not connected internally and should not be connected externally |
+| **#36** | **BE** | Bus Enable input signal provides external control of the Address, Data, and RWB buffers |
+| **#37** | **PHI2** | Phase 2 In is the system clock input to the microprocessor internal clock |
+| **#38** | **SOB** | Set Overflow input sets the overflow bit in the status code register on a negative transition |
+| **#39** | **PHI2O** | Phase 2 Out signal generated from PHI2 |
+| **#40** | **RESB** | Reset input used to initialize the microprocessor and start program execution |
+</details>
 
-**#2: RDY** - Ready (low input logic) will halt the microprocessor in its current state
-
-**#3: PHI1O** - Phase 1 Out is the inverted PHI2 signal
-
-**#4: IRQB** - Interrupt Request input signal to initiate an interrupt sequence
-
-**#5: MLB** - Memory Lock output to ensure the integrity of Read-Modify-Write instructions in multiprocessor systems
-
-**#6: NMIB** - Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition
-
-**#7: SYNC** - Synchronize output indicates OpCode fetch cycle
-
-**#8: VDD** - Positive power supply voltage
-
-**#9-20: A0** - Address Bus line 0 to 11 used to address memory and I/O registers
-
-**#21: VSS** - System logic ground
-
-**#22-25: A12** - Address Bus line 12 to 15 used to address memory and I/O registers
-
-**#26-33: D7 - D0** - Data Bus line 0 to 7 used for data exchange with memory and I/O registers
-
-**#34: RWB** - Read/Write output signal controls data transfer direction (high for read, low for write)
-
-**#35: NC** - No Connect pins not connected internally and should not be connected externally
-
-**#36: BE** - Bus Enable input signal provides external control of the Address, Data, and RWB buffers
-
-**#37: PHI2** - Phase 2 In is the system clock input to the microprocessor internal clock
-
-**#38: SOB** - Set Overflow input sets the overflow bit in the status code register on a negative transition
-
-**#39: PHI2O** - Phase 2 Out signal generated from PHI2
-
-**#40: RESB** - Reset input used to initialize the microprocessor and start program execution
 
 
 ### Key Features
@@ -107,63 +98,44 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 - 15 address lines (A0-A14) for accessing 32,768 unique locations
 - 8 data lines (I/O0-I/O7) for input/output
 
-#### Pins Explained
+<details>
+ <summary>
 
-**#1: A14** - Address line 14 (Most Significant Bit)
+#### Pin Connections
+</summary>
 
-**#2: A12** - Address line 12
+| Pin | Name | Description |
+|-----|------|-------------|
+| **#1** | **A14** | Address line 14 (Most Significant Bit) |
+| **#2** | **A12** | Address line 12 |
+| **#3** | **A7** | Address line 7 |
+| **#4** | **A6** | Address line 6 |
+| **#5** | **A5** | Address line 5 |
+| **#6** | **A4** | Address line 4 |
+| **#7** | **A3** | Address line 3 |
+| **#8** | **A2** | Address line 2 |
+| **#9** | **A1** | Address line 1 |
+| **#10** | **A0** | Address line 0 (Least Significant Bit) |
+| **#11** | **I/O0** | Data Input/Output 0 |
+| **#12** | **I/O1** | Data Input/Output 1 |
+| **#13** | **I/O2** | Data Input/Output 2 |
+| **#14** | **GND** | Ground |
+| **#15** | **I/O3** | Data Input/Output 3 |
+| **#16** | **I/O4** | Data Input/Output 4 |
+| **#17** | **I/O5** | Data Input/Output 5 |
+| **#18** | **I/O6** | Data Input/Output 6 |
+| **#19** | **I/O7** | Data Input/Output 7 |
+| **#20** | **CE** | Chip Enable (active low) |
+| **#21** | **A10** | Address line 10 |
+| **#22** | **OE** | Output Enable (active low) |
+| **#23** | **A11** | Address line 11 |
+| **#24** | **A9** | Address line 9 |
+| **#25** | **A8** | Address line 8 |
+| **#26** | **A13** | Address line 13 |
+| **#27** | **WE** | Write Enable (active low) |
+| **#28** | **VCC** | Power supply voltage |
+</details>
 
-**#3: A7** - Address line 7
-
-**#4: A6** - Address line 6
-
-**#5: A5** - Address line 5
-
-**#6: A4** - Address line 4
-
-**#7: A3** - Address line 3
-
-**#8: A2** - Address line 2
-
-**#9: A1** - Address line 1
-
-**#10: A0** - Address line 0 (Least Significant Bit)
-
-**#11: I/O0** - Data Input/Output 0
-
-**#12: I/O1** - Data Input/Output 1
-
-**#13: I/O2** - Data Input/Output 2
-
-**#14: GND** - Ground
-
-**#15: I/O3** - Data Input/Output 3
-
-**#16: I/O4** - Data Input/Output 4
-
-**#17: I/O5** - Data Input/Output 5
-
-**#18: I/O6** - Data Input/Output 6
-
-**#19: I/O7** - Data Input/Output 7
-
-**#20: CE** - Chip Enable (active low)
-
-**#21: A10** - Address line 10
-
-**#22: OE** - Output Enable (active low)
-
-**#23: A11** - Address line 11
-
-**#24: A9** - Address line 9
-
-**#25: A8** - Address line 8
-
-**#26: A13** - Address line 13
-
-**#27: WE** - Write Enable (active low)
-
-**#28: VCC** - Power supply voltage
 
 ### Key Features
 
@@ -195,84 +167,123 @@ This section meticulously breaks down each phase of the assembly process into cl
 ### 1. Connect the 6502 Microprocessor to Power
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-        <figcaption>Figure 1: W65C02S 40 Pin PDIP Pinout</figcaption>
-      </td>
-      <td align="center" >
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
-        <figcaption>Connect VDD to positive power, and VSS to ground</figcaption>
-      </td>
-    </tr>
-  </table>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
+      <em>Figure 1: W65C02S 40 Pinout</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
+      <em>Connect VDD to positive power, and VSS to ground</em>
+    </td>
+  </tr>
+</table>
+<details>
+<summary>
+ 
+#### Pin Connections
+
+</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#8** | **VDD** | Positive power supply voltage | ✔ |
+| **#21** | **VSS** | System logic ground | ✔ |
+</details>
 </div>
-
-#### Pin Connections (✔= Connect)
-
-**#8: VDD ✔** - Positive power supply voltage
-
-**#21: VSS ✔** - System logic ground
 
 
 ### 2. Connecting Input Pins
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-        <figcaption>Figure 1: W65C02S 40 Pin PDIP Pinout</figcaption>
-      </td>
-      <td align="center" >
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e5007ef8-211d-4549-bb34-91eba05b8ea5" alt="6502 Microprocessor connected to input pins" height="350"><br>
-        <figcaption>Connecting input pins, see below</figcaption>
-      </td>
-    </tr>
-  </table>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
+      <em>Figure 1: W65C02S 40 Pinout</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e5007ef8-211d-4549-bb34-91eba05b8ea5" alt="6502 Microprocessor connected to input pins" height="350"><br>
+      <em>Connecting input pins, see below</em>
+    </td>
+  </tr>
+</table>
+<details>
+<summary>
+
+#### Pin Connections
+</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#2** | **RDY** | Ready (low input logic) will halt the microprocessor in its current state | ✔ |
+| **#4** | **IRQB** | Interrupt Request input signal to initiate an interrupt sequence | ✔ |
+| **#6** | **NMIB** | Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition | ✔ |
+| **#36** | **BE** | Bus Enable input signal provides external control of the Address, Data, and RWB buffers | ✔ |
+| **#37** | **PHI2** | Phase 2 In is the system clock input to the microprocessor internal clock | ✔ |
+| **#38** | **SOB** | Set Overflow input sets the overflow bit in the status code register on a negative transition | ✔ |
+| **#40** | **RESB** | Reset input used to initialize the microprocessor and start program execution | ✔ |
+</details>
 </div>
 
-#### Pin Connections (✔= Connect)
-
-**#2: RDY ✔** - Ready (low input logic) will halt the microprocessor in its current state
-
-**#4: IRQB ✔** - Interrupt Request input signal to initiate an interrupt sequence
-
-**#6: NMIB ✔** - Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition
-
-**#36: BE ✔** - Bus Enable input signal provides external control of the Address, Data, and RWB buffers
-
-**#37: PHI2 ✔** - Phase 2 In is the system clock input to the microprocessor internal clock
-
-**#38: SOB ✔** - Set Overflow input sets the overflow bit in the status code register on a negative transition
-
-**#40: RESB ✔** - Reset input used to initialize the microprocessor and start program execution
-
-
-  
 ### 3. ROM Integration
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
-        <figcaption>Figure 2: 28C256 EEPROM Pinout</figcaption>
-      </td>
-      <td align="center" >
-        <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/5ec7bc17-05db-463e-a864-282cfb75943c" alt="28C256 EEPROM on breadboard" height="350"><br>
-        <figcaption>Connect VDD to positive power, and VSS to ground</figcaption>
-      </td>
-    </tr>
-  </table>
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
+      <em>Figure 2: 28C256 EEPROM Pinout</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/5ec7bc17-05db-463e-a864-282cfb75943c" alt="28C256 EEPROM on breadboard" height="350"><br>
+      <em>Connect VDD to positive power, and VSS to ground</em>
+    </td>
+  </tr>
+</table>
+ 
+<details>
+<summary>
+
+#### Pin Connections
+</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#14** | **GND** | System logic ground | ✔ |
+| **#28** | **VCC** | Positive power supply voltage | ✔ |
+</details>
 </div>
 
-#### Pin Connections (✔= Connect)
+### 4. ROM Control Signals
 
-**#14: VSS ✔** - System logic ground
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
+      <em>Figure 2: 28C256 EEPROM Pinout</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e303de2c-8efe-4379-bc5b-b9485eaacf0d" alt="28C256 EEPROM on breadboard" height="350"><br>
+      <em>Connecting control signal pins, see below</em>
+    </td>
+  </tr>
+</table>
+ 
+<details>
+<summary>
 
-**#28: VCC ✔** - Positive power supply voltage
+#### Pin Connections
+</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#27** | **WE** | Write Enable. Controls write operations. A low-to-high transition initiates a write cycle. | ✔ |
+| **#22** | **OE** | Output Enable (active low) | ✔ |
+</details>
+</div>
 
 
 
