@@ -160,6 +160,53 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 - Proper connection of CE, OE, and WE pins is crucial for correct operation and power management.
 
 
+## Understanding the NAND Gate
+The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. Here's why it's essential:
+
+1. **Clock Signal Inversion**: The 6502 requires a specific clock signal timing. The NAND gate, used as an inverter, helps shape the clock signal to meet these requirements.
+
+2. **Logic Level Conversion**: It can be used to convert between different logic levels if needed in our circuit.
+
+3. **Signal Buffering**: The NAND gate can act as a buffer, helping to maintain signal integrity in our circuit.
+
+4. **Noise Reduction**: By using the NAND gate as an inverter, we can help reduce noise in our clock signal, ensuring more reliable operation of the 6502.
+
+5. **Flexibility**: The chip contains four NAND gates, giving us flexibility to use the remaining gates for other logic functions if needed in future expansions of our project.
+
+<details>
+<summary>
+
+#### Pin Connections
+</summary>
+
+| Pin | Name | Description |
+|-----|------|-------------|
+| **#1, #4, #9, #12** | **Input A** | Input A for each of the four NAND gates |
+| **#2, #5, #10, #13** | **Input B** | Input B for each of the four NAND gates |
+| **#3, #6, #8, #11** | **Output** | Output for each of the four NAND gates |
+| **#7** | **GND** | Ground |
+| **#14** | **VCC** | Positive supply voltage |
+
+</details>
+
+### Key Features
+- Four independent 2-input NAND gates
+- Low power Schottky TTL logic
+- Operation from a single 5V supply
+- Fully compatible with most TTL families
+
+### Using NAND as an Inverter
+1. Connect both inputs of the NAND gate together.
+2. Use this as the single input for your inverter.
+3. The NAND gate's output will now be the inverted signal of your input.
+
+### Considerations
+- Ensure proper power supply (5V) and grounding for reliable operation.
+- Be mindful of propagation delays when using for time-sensitive operations.
+- Use decoupling capacitors near the VCC pin to reduce noise.
+- Unused inputs should be tied to a defined logic level (high or low) to prevent floating inputs.
+
+
 ## Step-by-Step Assembly Instructions
 
 This section meticulously breaks down each phase of the assembly process into clear, manageable steps. Starting with organizing your components, you'll move on to setting up your breadboards, wiring the CPU and support chips, and then proceed to connecting memory and I/O devices.
@@ -285,6 +332,36 @@ This section meticulously breaks down each phase of the assembly process into cl
 </details>
 </div>
 
+
+### 5. Adding the NAND Gate
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/68c86327-ae5b-4067-a8dd-a9766b4d31a7" alt="Datasheet diagram of SN74LS00N Nand Gates chip" height="350"><br>
+      <p>Figure 3: SN74LS00N Nand Gates Pinout</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/6fd2091d-d366-4422-99df-44678278babd" alt="SN74LS00N Nand Gates chip on breadboard" height="350"><br>
+      <p>Connecting the NAND gate to power</p>
+    </td>
+  </tr>
+</table>
+ 
+<details>
+<summary>
+
+
+#### Pin Connections
+</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#7** | **GND** | System logic ground | ✔ |
+| **#14** | **VCC** | Positive power supply voltage | ✔ |
+</details>
+</div>
 
 
 
