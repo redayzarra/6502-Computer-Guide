@@ -171,11 +171,11 @@ This section meticulously breaks down each phase of the assembly process into cl
   <tr>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-      <em>Figure 1: W65C02S 40 Pinout</em>
+      <p>Figure 1: W65C02S 40 Pinout</p>
     </td>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
-      <em>Connect VDD to positive power, and VSS to ground</em>
+      <p>Connect VDD to positive power, and VSS to ground</p>
     </td>
   </tr>
 </table>
@@ -201,11 +201,11 @@ This section meticulously breaks down each phase of the assembly process into cl
   <tr>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
-      <em>Figure 1: W65C02S 40 Pinout</em>
+      <p>Figure 1: W65C02S 40 Pinout</p>
     </td>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e5007ef8-211d-4549-bb34-91eba05b8ea5" alt="6502 Microprocessor connected to input pins" height="350"><br>
-      <em>Connecting input pins, see below</em>
+      <p>Connecting input pins, see below</p>
     </td>
   </tr>
 </table>
@@ -234,11 +234,11 @@ This section meticulously breaks down each phase of the assembly process into cl
   <tr>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
-      <em>Figure 2: 28C256 EEPROM Pinout</em>
+      <p>Figure 2: 28C256 EEPROM Pinout</p>
     </td>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/5ec7bc17-05db-463e-a864-282cfb75943c" alt="28C256 EEPROM on breadboard" height="350"><br>
-      <em>Connect VDD to positive power, and VSS to ground</em>
+      <p>Connect VDD to positive power, and VSS to ground</p>
     </td>
   </tr>
 </table>
@@ -263,11 +263,11 @@ This section meticulously breaks down each phase of the assembly process into cl
   <tr>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
-      <em>Figure 2: 28C256 EEPROM Pinout</em>
+      <p>Figure 2: 28C256 EEPROM Pinout</p>
     </td>
     <td align="center">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e303de2c-8efe-4379-bc5b-b9485eaacf0d" alt="28C256 EEPROM on breadboard" height="350"><br>
-      <em>Connecting control signal pins, see below</em>
+      <p>Connecting control signal pins, see below</p>
     </td>
   </tr>
 </table>
