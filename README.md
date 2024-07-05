@@ -396,6 +396,41 @@ This section meticulously breaks down each phase of the assembly process into cl
 </div>
 
 
+
+### 7. Connecting Address Lines 
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
+      <p>Figure 1: W65C02S 40 Pinout</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/03d88ea0-3122-4a85-8af6-8df3f4082757" alt="6502 Microprocessor connected to EEPROM through address lines" height="350"><br>
+      <p>Connecting address lines 0 to 14</p>
+    </td>
+  </tr>
+</table>
+
+<details>
+<summary>Pin Connections</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#2** | **RDY** | Ready (low input logic) will halt the microprocessor in its current state | ✔ |
+| **#4** | **IRQB** | Interrupt Request input signal to initiate an interrupt sequence | ✔ |
+| **#6** | **NMIB** | Non-Maskable Interrupt input initiates an interrupt sequence on a negative transition | ✔ |
+| **#36** | **BE** | Bus Enable input signal provides external control of the Address, Data, and RWB buffers | ✔ |
+| **#37** | **PHI2** | Phase 2 In is the system clock input to the microprocessor internal clock | ✔ |
+| **#38** | **SOB** | Set Overflow input sets the overflow bit in the status code register on a negative transition | ✔ |
+| **#40** | **RESB** | Reset input used to initialize the microprocessor and start program execution | ✔ |
+| **#9-23** | **A0-A14** | Address lines 0 through 14 | Connect to corresponding A0-A14 on EEPROM |
+
+</details>
+</div>
+
+
 <div><br></br></div>
   
 
