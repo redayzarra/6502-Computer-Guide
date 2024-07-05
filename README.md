@@ -364,11 +364,42 @@ This section meticulously breaks down each phase of the assembly process into cl
 </div>
 
 
+### 6. Converting NAND Gate to Inverter
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/68c86327-ae5b-4067-a8dd-a9766b4d31a7" alt="Datasheet diagram of SN74LS00N Nand Gates chip" height="350"><br>
+      <p>Figure 3: SN74LS00N Nand Gates Pinout</p>
+    </td>
+    <td align="center">
+      <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/feb1af65-d02c-4285-ac35-d16baa2d82a1" alt="SN74LS00N Nand Gates chip converted to inverter" height="350"><br>
+      <p>Converting the NAND gate into inverter for EEPROM</p>
+    </td>
+
+  </tr>
+</table>
+ 
+<details>
+<summary>Pin Connections</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#7** | **GND** | System logic ground | ✔ |
+| **#14** | **VCC** | Positive power supply voltage | ✔ |
+| **#12** | **Input A** | NAND gate input | Connect to #13 and A15 |
+| **#13** | **Input B** | NAND gate input | Connect to #12 and A15 |
+| **#11** | **Output Y** | NAND gate output | Connect to EEPROM Chip Enable |
+
+</details>
+</div>
+
 
 <div><br></br></div>
   
 
-### Testing and Troubleshooting
+## Testing and Troubleshooting
 After assembling each section, it’s essential to test and troubleshoot:
 1. Power on the circuit and check the voltages.
 2. Use the multimeter and oscilloscope to verify signals.
