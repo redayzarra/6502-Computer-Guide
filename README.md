@@ -216,11 +216,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
       <p>Figure 1: W65C02S 40 Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/614dc660-b828-47a7-9604-6b40eb56a532" alt="6502 Microprocessor on breadboard" height="350"><br>
       <p>Connect VDD to positive power, and VSS to ground</p>
     </td>
@@ -246,11 +246,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
       <p>Figure 1: W65C02S 40 Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e5007ef8-211d-4549-bb34-91eba05b8ea5" alt="6502 Microprocessor connected to input pins" height="350"><br>
       <p>Connecting input pins, see below</p>
     </td>
@@ -279,11 +279,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
       <p>Figure 2: 28C256 EEPROM Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/5ec7bc17-05db-463e-a864-282cfb75943c" alt="28C256 EEPROM on breadboard" height="350"><br>
       <p>Connect VDD to positive power, and VSS to ground</p>
     </td>
@@ -308,11 +308,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
       <p>Figure 2: 28C256 EEPROM Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/e303de2c-8efe-4379-bc5b-b9485eaacf0d" alt="28C256 EEPROM on breadboard" height="350"><br>
       <p>Connecting control signal pins, see below</p>
     </td>
@@ -338,11 +338,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/68c86327-ae5b-4067-a8dd-a9766b4d31a7" alt="Datasheet diagram of SN74LS00N Nand Gates chip" height="350"><br>
       <p>Figure 3: SN74LS00N Nand Gates Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/6fd2091d-d366-4422-99df-44678278babd" alt="SN74LS00N Nand Gates chip on breadboard" height="350"><br>
       <p>Connecting the NAND gate to power</p>
     </td>
@@ -369,11 +369,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/68c86327-ae5b-4067-a8dd-a9766b4d31a7" alt="Datasheet diagram of SN74LS00N Nand Gates chip" height="350"><br>
       <p>Figure 3: SN74LS00N Nand Gates Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/feb1af65-d02c-4285-ac35-d16baa2d82a1" alt="SN74LS00N Nand Gates chip converted to inverter" height="350"><br>
       <p>Converting the NAND gate into inverter for EEPROM</p>
     </td>
@@ -402,11 +402,11 @@ This section meticulously breaks down each phase of the assembly process into cl
 <div align="center">
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="300">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
       <p>Figure 1: W65C02S 40 Pinout</p>
     </td>
-    <td align="center">
+    <td align="center" width="450">
       <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/03d88ea0-3122-4a85-8af6-8df3f4082757" alt="6502 Microprocessor connected to EEPROM through address lines" height="350"><br>
       <p>Connecting address lines 0 to 14</p>
     </td>
