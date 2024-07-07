@@ -67,10 +67,14 @@ if __name__ == "__main__":
         sys.exit(1)
 
     file_path = sys.argv[1]
+    g = False
+    
     try:
-        print(f"{GREEN}With this treasure, I summon...")
-        print_hexdump_banner()
-        print(f"{RESET}")
+        if g:
+            print(f"{GREEN}With this treasure, I summon...")
+            print_hexdump_banner()
+            print(f"{RESET}")
+            
         formatted_output = format_binary_file(file_path)
         print(formatted_output)
         print("\n")
