@@ -1,7 +1,7 @@
 import unittest
 import io
 import sys
-from hexdump import format_binary_file
+from hexdump.hexdump import format_binary_file
 
 class TestHexdump(unittest.TestCase):
 
