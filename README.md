@@ -239,6 +239,7 @@ The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 compu
 | **VSS** | **Internal Logic Ground** | System logic ground. |
 </details>
 </div>
+
 The W65C22 is a flexible I/O device designed for use with the 65xx series microprocessor family. It features:
 - Two 8-bit bidirectional I/O ports
 - Two 16-bit programmable timer/counters
