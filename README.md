@@ -27,18 +27,15 @@ When you receive your kit, ensure you have all the necessary components:
 </div>
 
 ## Understanding the 6502 Microprocessor
-The 6502 microprocessor was a popular chip in the 1970s, used in many famous computers like the Apple I and Commodore 64. It features:
-- 8-bit data bus
-- 16-bit address bus
-- Data sheet (30 pages)
 
+<div align="center">
+<img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/7a01b0e3-954c-416e-8790-4596a82aa116" alt="Datasheet diagram of 6502 Microprocessor" height="350"><br>
 <details>
- 
 <summary>
 
 #### Pin Connections
 </summary>
- 
+
 | Pin | Name | Description |
 |-----|------|-------------|
 | **#1** | **VPB** | Vector Pull output indicates when interrupt vectors are being addressed |
@@ -61,8 +58,12 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 | **#39** | **PHI2O** | Phase 2 Out signal generated from PHI2 |
 | **#40** | **RESB** | Reset input used to initialize the microprocessor and start program execution |
 </details>
+</div>
 
-
+The 6502 microprocessor was a popular chip in the 1970s, used in many famous computers like the Apple I and Commodore 64. It features:
+- 8-bit data bus
+- 16-bit address bus
+- Data sheet (30 pages)
 
 ### Key Features
 
@@ -91,14 +92,9 @@ The 6502 microprocessor was a popular chip in the 1970s, used in many famous com
 
 
 ## Understanding the AT28C256 EEPROM
-The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (EEPROM) used to store our program. It features:
-
-- Storage capacity: 256K bits (32 kilobytes)
-- Organization: 32,768 words x 8 bits
-- 15 address lines (A0-A14) for accessing 32,768 unique locations
-- 8 data lines (I/O0-I/O7) for input/output
-
-<details>
+<div align="center">
+ <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/ef555cfb-39d4-4f68-9f09-73f2b6c7d4ec" alt="Datasheet diagram of 28C256 EEPROM" height="350"><br>
+ <details>
  <summary>
 
 #### Pin Connections
@@ -135,6 +131,13 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 | **#27** | **WE** | Write Enable (active low) |
 | **#28** | **VCC** | Power supply voltage |
 </details>
+</div>
+The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (EEPROM) used to store our program. It features:
+
+- Storage capacity: 256K bits (32 kilobytes)
+- Organization: 32,768 words x 8 bits
+- 15 address lines (A0-A14) for accessing 32,768 unique locations
+- 8 data lines (I/O0-I/O7) for input/output
 
 
 ### Key Features
@@ -161,19 +164,9 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 
 
 ## Understanding the NAND Gate
-The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. Here's why it's essential:
-
-1. **Clock Signal Inversion**: The 6502 requires a specific clock signal timing. The NAND gate, used as an inverter, helps shape the clock signal to meet these requirements.
-
-2. **Logic Level Conversion**: It can be used to convert between different logic levels if needed in our circuit.
-
-3. **Signal Buffering**: The NAND gate can act as a buffer, helping to maintain signal integrity in our circuit.
-
-4. **Noise Reduction**: By using the NAND gate as an inverter, we can help reduce noise in our clock signal, ensuring more reliable operation of the 6502.
-
-5. **Flexibility**: The chip contains four NAND gates, giving us flexibility to use the remaining gates for other logic functions if needed in future expansions of our project.
-
-<details>
+<div align="center">
+ <img src="https://github.com/redayzarra/6502-Computer-Guide/assets/113388793/68c86327-ae5b-4067-a8dd-a9766b4d31a7" alt="Datasheet diagram of SN74LS00N Nand Gates chip" height="350"><br>
+ <details>
 <summary>
 
 #### Pin Connections
@@ -188,6 +181,18 @@ The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 compu
 | **#14** | **VCC** | Positive supply voltage |
 
 </details>
+</div>
+The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. Here's why it's essential:
+
+1. **Clock Signal Inversion**: The 6502 requires a specific clock signal timing. The NAND gate, used as an inverter, helps shape the clock signal to meet these requirements.
+
+2. **Logic Level Conversion**: It can be used to convert between different logic levels if needed in our circuit.
+
+3. **Signal Buffering**: The NAND gate can act as a buffer, helping to maintain signal integrity in our circuit.
+
+4. **Noise Reduction**: By using the NAND gate as an inverter, we can help reduce noise in our clock signal, ensuring more reliable operation of the 6502.
+
+5. **Flexibility**: The chip contains four NAND gates, giving us flexibility to use the remaining gates for other logic functions if needed in future expansions of our project.
 
 ### Key Features
 - Four independent 2-input NAND gates
@@ -205,6 +210,63 @@ The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 compu
 - Be mindful of propagation delays when using for time-sensitive operations.
 - Use decoupling capacitors near the VCC pin to reduce noise.
 - Unused inputs should be tied to a defined logic level (high or low) to prevent floating inputs.
+
+
+## Understanding the W65C22 Versatile Interface Adapter (VIA)
+<div align="center">
+ <img src="https://github.com/user-attachments/assets/af94dcd0-7da2-44ea-94ec-d5b9e341c618" alt="Datasheet diagram of W65C22 Versatile Interface Adapter" height="350"><br>
+ <details>
+
+<summary>
+ 
+#### Pin Connections
+</summary>
+ 
+| Pin | Name | Description |
+|-----|------|-------------|
+| **CA1, CA2** | **Peripheral A Control Lines** | Interrupt inputs or handshake outputs for PA. CA1 also controls input data latching on PA. |
+| **CB1, CB2** | **Peripheral B Control Lines** | Interrupt inputs or handshake outputs for PB. Also serve as serial data port for Shift Register. |
+| **CS1, CS2B** | **Chip Select** | Enable chip when CS1 is logic 1 and CS2B is logic 0. |
+| **D0-D7** | **Data Bus** | Bidirectional lines for data transfer with the microprocessor. |
+| **IRQB** | **Interrupt Request** | Outputs logic 0 when interrupt conditions are met. |
+| **PA0-PA7** | **Peripheral I/O Port A** | 8-line bidirectional bus for data, control, and status transfer. |
+| **PB0-PB7** | **Peripheral I/O Port B** | 8-line bidirectional bus with additional timer control for PB6 and PB7. |
+| **PHI2** | **Phase 2 Internal Clock** | Controls data transfers between VIA and microprocessor. |
+| **RESB** | **Reset** | Clears internal registers (except T1, T2 counters/latches, and SR). |
+| **RS0-RS3** | **Register Select** | Selects one of 16 internal registers. |
+| **R/WB** | **Read/Write** | Controls data transfer direction. |
+| **VDD** | **Positive Power Supply** | Positive supply voltage. |
+| **VSS** | **Internal Logic Ground** | System logic ground. |
+</details>
+</div>
+The W65C22 is a flexible I/O device designed for use with the 65xx series microprocessor family. It features:
+- Two 8-bit bidirectional I/O ports
+- Two 16-bit programmable timer/counters
+- 8-bit shift register for serial communications
+- Data sheet (52 pages)
+
+### Key Features
+- Peripheral Ports (PA0-PA7, PB0-PB7): Two 8-bit bidirectional I/O ports for interfacing with peripheral devices.
+- Timer/Counters: Two 16-bit programmable interval timers/event counters.
+- Shift Register: 8-bit shift register for serial-to-parallel and parallel-to-serial conversion.
+- Interrupt Handling: Supports multiple interrupt sources with individual enable/disable control.
+- Handshake Control: Programmable handshake modes for data transfer synchronization.
+- Programmable I/O: Each pin can be individually programmed as input or output.
+
+### Connecting W65C22 to Microprocessor and Peripherals
+1. Data lines (D0-D7) connect bidirectionally to the microprocessor's data bus.
+2. Register Select lines (RS0-RS3) connect to the microprocessor's address lines.
+3. Chip Select lines (CS1, CS2B) connect to address decoding logic.
+4. Peripheral ports (PA0-PA7, PB0-PB7) connect to various I/O devices.
+5. Control lines (CA1, CA2, CB1, CB2) connect to peripheral handshake or interrupt signals.
+
+### Considerations
+- The W65C22 has 16 internal registers, accessible via the RS0-RS3 lines.
+- Proper configuration of Data Direction Registers is crucial for correct I/O operation.
+- Timer interrupts can be used for generating precise timing intervals or counting external events.
+- The Shift Register can be used for serial communication protocols.
+- Interrupt flags and enables must be properly managed for efficient interrupt-driven operations.
+- The device is versatile but requires careful programming to fully utilize its features.
 
 
 ## Step-by-Step Assembly Instructions
