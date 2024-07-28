@@ -6,7 +6,12 @@ def create_eeprom(size=32768, fill_value=0xEA, filename="rom.bin"):
     :param fill_value: Value to fill the EEPROM with (default: 0xEA)
     :param filename: Name of the output file (default: "rom.bin")
     """
+    # Fill up the rom with EA bytes
     rom = bytearray([fill_value] * size)
+    
+    # Overwrite `7ffc` to "0" and `7ffd` to "80"
+    rom[0x7ffc] = 0x00
+    rom[0x7ffd] = 0x80
     
     try:
         with open(filename, "wb") as out_file:
