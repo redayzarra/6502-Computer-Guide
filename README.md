@@ -182,30 +182,27 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 
 </details>
 </div>
-The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. Here's why it's essential:
-
-1. **Clock Signal Inversion**: The 6502 requires a specific clock signal timing. The NAND gate, used as an inverter, helps shape the clock signal to meet these requirements.
-
-2. **Logic Level Conversion**: It can be used to convert between different logic levels if needed in our circuit.
-
-3. **Signal Buffering**: The NAND gate can act as a buffer, helping to maintain signal integrity in our circuit.
-
-4. **Noise Reduction**: By using the NAND gate as an inverter, we can help reduce noise in our clock signal, ensuring more reliable operation of the 6502.
-
-5. **Flexibility**: The chip contains four NAND gates, giving us flexibility to use the remaining gates for other logic functions if needed in future expansions of our project.
-
-### Key Features
+The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. It features:
 - Four independent 2-input NAND gates
 - Low power Schottky TTL logic
 - Operation from a single 5V supply
-- Fully compatible with most TTL families
+
+### Key Features
+
+- Clock Signal Inversion: Helps shape the clock signal to meet 6502 requirements.
+- Logic Level Conversion: Can convert between different logic levels if needed.
+- Signal Buffering: Acts as a buffer to maintain signal integrity.
+- Noise Reduction: Helps reduce noise in the clock signal when used as an inverter.
+- Flexibility: Contains four NAND gates for potential use in future expansions.
 
 ### Using NAND as an Inverter
+
 1. Connect both inputs of the NAND gate together.
 2. Use this as the single input for your inverter.
 3. The NAND gate's output will now be the inverted signal of your input.
 
 ### Considerations
+
 - Ensure proper power supply (5V) and grounding for reliable operation.
 - Be mindful of propagation delays when using for time-sensitive operations.
 - Use decoupling capacitors near the VCC pin to reduce noise.
