@@ -182,31 +182,36 @@ The AT28C256 is a 32K x 8 Electrically Erasable Programmable Read-Only Memory (E
 
 </details>
 </div>
-The SN74LS00N is a quadruple 2-input positive-NAND gates chip. In our 6502 computer project, we're using it as an inverter. It features:
+The SN74LS00N is a quadruple 2-input positive-NAND gates chip used as an inverter in our 6502 computer project. It features:
 - Four independent 2-input NAND gates
 - Low power Schottky TTL logic
 - Operation from a single 5V supply
 
 ### Key Features
 
-- Clock Signal Inversion: Helps shape the clock signal to meet 6502 requirements.
-- Logic Level Conversion: Can convert between different logic levels if needed.
-- Signal Buffering: Acts as a buffer to maintain signal integrity.
-- Noise Reduction: Helps reduce noise in the clock signal when used as an inverter.
-- Flexibility: Contains four NAND gates for potential use in future expansions.
+- Clock Signal Inversion: Shapes the clock signal to meet 6502 requirements.
+- Address Decoding: Inverts the A15 signal to select between ROM and RAM or I/O devices.
+- Logic Level Conversion: Adapts signals between different logic families.
+- Signal Buffering: Maintains signal integrity.
+- Noise Reduction: Reduces clock signal noise when used as an inverter.
 
 ### Using NAND as an Inverter
 
+To convert a NAND gate to an inverter:
 1. Connect both inputs of the NAND gate together.
-2. Use this as the single input for your inverter.
-3. The NAND gate's output will now be the inverted signal of your input.
+2. Use this connected pair as the single input.
+3. The output will be the inverted signal of the input.
+
+This configuration uses the NAND gate's truth table:
+- When both inputs are high (1), the output is low (0)
+- For all other input combinations, the output is high (1)
 
 ### Considerations
 
-- Ensure proper power supply (5V) and grounding for reliable operation.
-- Be mindful of propagation delays when using for time-sensitive operations.
-- Use decoupling capacitors near the VCC pin to reduce noise.
-- Unused inputs should be tied to a defined logic level (high or low) to prevent floating inputs.
+- Ensure proper 5V power supply and grounding.
+- Account for propagation delays in time-sensitive operations.
+- Use decoupling capacitors near the VCC pin.
+- Tie unused inputs to a defined logic level to prevent floating inputs.
 
 
 ## Understanding the W65C22 Versatile Interface Adapter (VIA)
