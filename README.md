@@ -462,7 +462,7 @@ This section meticulously breaks down each phase of the assembly process into cl
 
 
 
-### 7. Connecting Address Lines 
+### 7. Connecting Address Lines to ROM
 
 <div align="center">
 <table>
@@ -496,7 +496,7 @@ This section meticulously breaks down each phase of the assembly process into cl
 </div>
 
 
-### 8. Connecting Data Lines 
+### 8. Connecting Data Lines to ROM
 <div align="center">
 <table>
   <tr>
@@ -524,6 +524,60 @@ This section meticulously breaks down each phase of the assembly process into cl
 | **#40** | **RESB** | Reset input used to initialize the microprocessor and start program execution | ✔ |
 | **#9-23** | **A0-A14** | Address lines 0 through 14 | Connect to corresponding A0-A14 on EEPROM |
 | **#25-32** | **D0-D7** | Data lines 0 through 7 | Connect to corresponding D0-D7 on EEPROM |
+
+</details>
+</div>
+
+### 9. Adding the W65C22 VIA
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="300">
+      <img src="https://github.com/user-attachments/assets/af94dcd0-7da2-44ea-94ec-d5b9e341c618" alt="Datasheet diagram of W65C22 VIA" height="350"><br>
+      <p>Figure 4: W65C22 VIA Pinout</p>
+    </td>
+    <td align="center" width="450">
+      <img src="https://github.com/user-attachments/assets/18674732-1000-4100-91b9-21a87327246d" alt="W65C22 VIA connected to 6502 Microprocessor" height="350"><br>
+      <p>Connecting the W65C22 VIA to the 6502</p>
+    </td>
+  </tr>
+</table>
+<details>
+<summary>Pin Connections</summary>
+
+| Pin | Name | Description | Connect |
+|-----|------|-------------|---------|
+| **#20** | **VDD** | Positive power supply voltage | ✔ |
+| **#1** | **VSS** | System logic ground | ✔ |
+
+</details>
+</div>
+
+### 10. Address Decoding and Additional Connections for W65C22 VIA
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="300">
+      <img src="https://github.com/user-attachments/assets/af94dcd0-7da2-44ea-94ec-d5b9e341c618" alt="Diagram of NAND gates for address decoding" height="350"><br>
+      <p>Figure 5: NAND Gate Logic for Address Decoding</p>
+    </td>
+    <td align="center" width="450">
+      <img src="https://github.com/user-attachments/assets/413e003c-0d11-4fa0-ab3c-114be5424084"" alt="W65C22 VIA connected with address decoding" height="350"><br>
+      <p>Connecting address decoding logic to W65C22 VIA</p>
+    </td>
+  </tr>
+</table>
+<details>
+<summary>Address Decoding Connections</summary>
+
+| Connection | Description |
+|------------|-------------|
+| **NAND Gate 1** | Input: Inverted A15, A14. Output: To CS2B of W65C22 |
+| **NAND Gate 2** | Input 1: Output from NAND Gate 1. Input 2: A14 |
+| **A13** | Directly connected to CS1 of W65C22 |
+| **A14** | Connected to one input of NAND Gate 2 |
+| **A15** | Inverted and connected to one input of NAND Gate 1 |
 
 </details>
 </div>
